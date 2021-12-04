@@ -1,0 +1,30 @@
+<!-- app/templates/admin/departments/department.html -->
+
+{% import "bootstrap/wtf.html" as wtf %}
+{% extends "base.html" %}
+{% block title %}
+    {% if add_publicservant %}
+        Add Public Servant
+    {% else %}
+        Edit Public Servant
+    {% endif %}
+{% endblock %}
+{% block body %}
+<div class="content-section">
+ <div class="outer">
+    <div class="middle">
+      <div class="inner">
+        <div class="center">
+            {% if add_publicservant %}
+                <h1>Add Public Servant</h1>
+            {% else %}
+                <h1>Edit Public Servant</h1>
+            {% endif %}
+            <br/>
+            {{ wtf.quick_form(form) }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
