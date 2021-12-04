@@ -2,6 +2,7 @@
 
 class Config(object):
     DEBUG = False
+    FLASK_CONFIG=production
 
 class DevelopmentConfig(Config):
     DEBUG = True
